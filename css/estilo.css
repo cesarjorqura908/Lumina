@@ -131,5 +131,22 @@ body {
         padding: 50px 0;
     }
 
+    /* Ajustar el tamaño de los contenedores de los planes */
+.card {
+    height: 400px; /* Ajusta la altura de los contenedores según tu preferencia */
+}
+
+/* Ajustar el tamaño de las imágenes */
+.card-img-top {
+    height: 200px; /* Ajusta la altura de las imágenes según tu preferencia */
+    object-fit: cover; /* Para mantener la proporción de la imagen y evitar que se deforme */
+}
+
+/* Ajustar el tamaño del texto de la descripción */
+.card-text {
+    height: 150px; /* Ajusta la altura del texto según tu preferencia */
+    overflow-y: auto; /* Para agregar un desplazamiento vertical si el contenido del texto es largo */
+}
+
     
 }

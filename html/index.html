@@ -38,7 +38,7 @@
                         <a href="#planesE" class="nav-link">Planes</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contactoE" class="nav-link">Contrata</a>
+                        <a href="#contactoE" class="nav-link">Contactanos</a>
                     </li>
                 </ul>
             </div>
@@ -266,13 +266,14 @@
 							
 							<div class="col-md-12">
 								<div class="mb-3">
-									<input type="text" class="form-control" placeholder="Nombre">
+									<input type="text" class="form-control" placeholder="Nombre" required pattern="[A-Za-z]+" title="Ingrese solo letras">
 								</div>
 							</div>
 							
 							<div class="col-md-12">
 								<div class="mb-3">
-									<input type="email" class="form-control" placeholder="Correo">
+									<input type="email" class="form-control" placeholder="Correo" required>
+
 								</div>
 							</div>
 							
@@ -289,7 +290,7 @@
 			</div>
 		</div>
 	</section>
-<!-- Fin seccion conacto -->
+<!-- Fin seccion contacto -->
 
     <!-- Modales -->
     <!-- Modal Plan Básico -->
@@ -309,7 +310,6 @@
             </div>
         </div>
     </div>
-
     <!-- Modal Plan Byte -->
     <div class="modal fade" id="byteModal" tabindex="-1" aria-labelledby="byteModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -327,7 +327,6 @@
             </div>
         </div>
     </div>
-
     <!-- Modal Plan Giga -->
     <div class="modal fade" id="gigaModal" tabindex="-1" aria-labelledby="gigaModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -345,8 +344,6 @@
             </div>
         </div>
     </div>
-
-	
     <!-- Fin de Modals -->
 
 	<footer class="bg-dark p-2 text-center">
