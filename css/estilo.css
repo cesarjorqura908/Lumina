@@ -11,12 +11,17 @@ body {
 }
 
 #carouselE + section {
-    margin-top: calc(25vh - 56px); /* Ajusta este valor según el tamaño de la barra de navegación (si tienes una) */
+    margin-top: calc(25vh - 56px); 
 }
 
 #conocenosE + section {
-    margin-top: calc(55vh - 56px); /* Ajusta este valor según el tamaño de la barra de navegación (si tienes una) */
+    margin-top: calc(55vh - 56px); 
 }
+
+#serviciosE + section {
+    margin-top: calc(30vh - 56px); 
+}
+
 
 .carousel-item {
     height: 80vh;
