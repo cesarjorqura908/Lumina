@@ -6,17 +6,29 @@ body {
     background: #050a02;
 }
 
+#conocenosE {
+    background-color: rgb(73, 121, 28);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#planesE {
+    background-color: rgb(73, 121, 28);
+}
+
 .section-padding {
     padding: 70px 0;
 }
 
 #carouselE + section {
     margin-top: calc(25vh - 56px); 
+    
 }
 
-#conocenosE + section {
-    margin-top: calc(55vh - 56px); 
-}
+/* #conocenosE + section { 
+     margin-top: calc(55vh - 56px);
+ } */
 
 #serviciosE + section {
     margin-top: calc(30vh - 56px); 

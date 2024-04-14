@@ -15,38 +15,49 @@
 </head>
 
 <body>
-    <!-- Barra de Navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a href="#" class="navbar-brand"> <span class="text-primary">Free</span>Tv </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
-                aria-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"> </span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarS">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a href="#carouselE" class="nav-link">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#conocenosE" class="nav-link">Conócenos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#serviciosE" class="nav-link">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#planesE" class="nav-link">Planes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contactoE" class="nav-link">Contactanos</a>
-                    </li>
-                </ul>
-            </div>
+    
+<!-- Barra de Navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a href="#" class="navbar-brand"> <span class="text-primary">Free</span>Tv </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarS"
+            aria-controls="navbarS" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"> </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarS">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a href="#carouselE" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#conocenosE" class="nav-link">Conócenos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#serviciosE" class="nav-link">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#planesE" class="nav-link">Planes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contactoE" class="nav-link">Contactanos</a>
+                </li>
+                
+                <li class="nav-item">
+                    <!-- Icono de carrito de compras con enlace al modal -->
+                <a href="#carritoFinalModal" class="nav-link" data-bs-toggle="modal" data-bs-target="#carritoFinalModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path d="M1 1.5a.5.5 0 0 1 .5-.5h1.627l.347-1.39A.5.5 0 0 1 3.97.5h8.06a.5.5 0 0 1 .395.21l1.882 2.534H14.5a.5.5 0 0 1 0 1h-.327l-.855 3.418a2 2 0 0 1-1.97 1.582H5.186a2 2 0 0 1-1.97-1.582L2.654 5H1.5a.5.5 0 0 1-.5-.5zM5.186 4h5.628l.81 3.24H4.375z"/>
+                        <path d="M7.5 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                    </svg>
+                </a>
+                </li>
+            </ul>
         </div>
-    </nav>
-    <!-- Fin de Barra de Navegación -->
-
-    <!-- Carrusel -->
+    </div>
+</nav>
+<!-- Fin de Barra de Navegación -->
+   
+<!-- Carrusel -->
     <div id="carouselE" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselE" data-bs-slide-to="0" class="active"
@@ -56,6 +67,7 @@
             <button type="button" data-bs-target="#carouselE" data-bs-slide-to="2" aria-current="true"
                 aria-label="Slide 3"></button>
         </div>
+
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="../img/home-1.jpg" class="d-block w-100" alt="">
@@ -198,7 +210,9 @@
                                 - National Geographic Wild" Entre muchos más.
                             </p>
                             <button class="btn bg-primary text-white" data-bs-toggle="modal"
-                                data-bs-target="#basicoModal">Más Información</button>
+                                data-bs-target="#basicoModal">Ver canales</button>
+                            <button class="btn bg-primary text-white" data-bs-toggle="modal"
+                                data-bs-target="#carritoBmodal">Añadir al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -216,7 +230,9 @@
                                 Warner" Entre muchos más.
                             </p>
                             <button class="btn bg-primary text-white" data-bs-toggle="modal"
-                                data-bs-target="#byteModal">Más Información</button>
+                                data-bs-target="#byteModal">Ver canales</button>
+                            <button class="btn bg-primary text-white" data-bs-toggle="modal"
+                                data-bs-target="#carritoPmodal">Añadir al carrito</button>    
                         </div>
                     </div>
                 </div>
@@ -234,7 +250,9 @@
                                 CineMax- Mtv Latino" Entre muchos más.
                             </p>
                             <button class="btn bg-primary text-white" data-bs-toggle="modal"
-                                data-bs-target="#gigaModal">Más Información</button>
+                                data-bs-target="#gigaModal">Ver canales</button>
+                            <button class="btn bg-primary text-white" data-bs-toggle="modal"
+                                data-bs-target="#carritoGmodal">Añadir al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -269,7 +287,19 @@
 									<input type="text" class="form-control" placeholder="Nombre" required pattern="[A-Za-z]+" title="Ingrese solo letras">
 								</div>
 							</div>
+
+                            <div class="col-md-12">
+								<div class="mb-3">
+									<input type="text" class="form-control" placeholder="Rut" title="Ingrese su Rut">
+								</div>
+							</div>
 							
+                            <div class="col-md-12">
+								<div class="mb-3">
+									<input type="text" class="form-control" placeholder="Telefono" required pattern="[0-9]+" title="Ingrese solo números">
+								</div>
+							</div>
+
 							<div class="col-md-12">
 								<div class="mb-3">
 									<input type="email" class="form-control" placeholder="Correo" required>
@@ -293,12 +323,131 @@
 <!-- Fin seccion contacto -->
 
     <!-- Modales -->
+
+    <!-- Modal agregar al carro plan basico -->
+    <div id="carritoBmodal" class="modal fade" tabindex="-1" aria-labelledby="basicoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="basicoModalLabel">Carrito de compras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>El plan tiene un costo de $9.990. ¿Desea comprarlo?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contactoE" class="btn btn-primary">Confirmar compra</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal agregar al carro plan byte -->
+    <div id="carritoPmodal" class="modal fade" tabindex="-1" aria-labelledby="basicoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="basicoModalLabel">Carrito de compras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>El plan tiene un costo de $14.990. ¿Desea comprarlo?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contactoE" class="btn btn-primary">Confirmar compra</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal carrito compras 3 -->
+    <div id="carritoGmodal" class="modal fade" tabindex="-1" aria-labelledby="basicoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="basicoModalLabel">Carrito de compras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>El plan tiene un costo de $19.990. ¿Desea comprarlo?</p>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="#contactoE" class="btn btn-primary">Confirmar compra</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Modal de Carrito de Compras final -->
+<div id="carritoFinalModal" class="modal fade" tabindex="-1" aria-labelledby="basicoModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title">Carrito de Compras</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <div class="mb-3">
+            <label for="producto1" class="form-label">Plan básico $9.990</label>
+            <i class="bi bi-trash text-danger"></i>
+        </div>
+        <div class="mb-3">
+            <label for="producto2" class="form-label">Suscripción HBO Max $5.000</label>
+            <i class="bi bi-trash text-danger"></i>
+        </div>
+        <div class="mb-3">
+            <p>TOTAL: <span id="total">$0.00</span></p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" id="btnConfirmar">Comprar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="modal" id="modalCarritoF">
+    <div class="modal-contenido">
+        <span class="cerrar" id="cerrarCarro">&times;</span>
+        <h2>Carrito de Compras</h2>
+        <!-- Cuadros de texto -->
+        <div class="mb-3">
+            <label for="producto1" class="form-label">Plan basico $9.990</label>
+            <input type="text" class="form-control" id="producto1">
+            <i class="bi bi-trash text-danger"></i>
+        </div>
+        <div class="mb-3">
+            <label for="producto2" class="form-label">Producto 2</label>
+            <input type="text" class="form-control" id="producto2">
+            <i class="bi bi-trash text-danger"></i>
+        </div>
+        <div class="mb-3">
+            <label for="producto3" class="form-label">Producto 3</label>
+            <input type="text" class="form-control" id="producto3">
+            <i class="bi bi-trash text-danger"></i>
+        </div>
+        <!-- Botón de confirmar -->
+        <button class="btn btn-primary" id="btnConfirmar">Confirmar</button>
+    </div>
+</div>
+<!-- Fin del Modal de Carrito de Compras final -->
+    
+
     <!-- Modal Plan Básico -->
     <div class="modal fade" id="basicoModal" tabindex="-1" aria-labelledby="basicoModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="basicoModalLabel">Lista canales Plan Básico</h5>
+                    <h5 class="modal-title" id="basicoModalLabel">Lista de canales Plan Básico</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -310,12 +459,13 @@
             </div>
         </div>
     </div>
+
     <!-- Modal Plan Byte -->
     <div class="modal fade" id="byteModal" tabindex="-1" aria-labelledby="byteModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="byteModalLabel">Lista canales Plan Byte</h5>
+                    <h5 class="modal-title" id="byteModalLabel">Lista de canales Plan Byte</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -332,7 +482,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="gigaModalLabel">Lista canales Plan Giga</h5>
+                    <h5 class="modal-title" id="gigaModalLabel">Lista de canales Plan Giga</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
