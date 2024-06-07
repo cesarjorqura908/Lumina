@@ -199,63 +199,76 @@
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-4">
                     <div class="card text-light text-center bg-dark pb-2">
-                        <div class="card-body text-white">
-                            <div class="img-area mb-4">
+                        <div class="card-body text-white carta">
+                            <div id = "div-carta-1" class="img-area mb-4">
                                 <img src="../img/project-1.jpg" class="img-fluid" alt="">
                             </div>
-                            <h3>Plan Byte</h3>
+                            <div class="contenedor-carta-parrafo">
+                            <h3 class="titulo_carta">Plan Byte</h3>
                             <script>
                                 dolar_api(9990, "#precio1");
                             </script>
-                            <h4 id="precio1">$9.990/mes</h4>
-                            <p class="lead">Disfruta de 72 canales disponibles en cualquier dispositivo (Máximo 1 al
+                            <h4 id="precio1"></h4>
+                            <p id ="parrafo1" class="lead">Disfruta de 72 canales disponibles en cualquier dispositivo (Máximo 1 al
                                 mismo tiempo) entre los cuales tendrás: "Fox life - Nickelodeon - FX Movies - Tyc Sport
                                 - National Geographic Wild" Entre muchos más.
                             </p>
-                            <button class="btn bg-primary text-white" data-bs-toggle="modal"
+                            <button class="btn bg-primary text-white botoncarta1" data-bs-toggle="modal"
                                 data-bs-target="#basicoModal">Ver canales</button>
-                            <button class="btn bg-primary text-white" data-bs-toggle="modal"
+                            <button class="btn bg-primary text-white botoncarta1" data-bs-toggle="modal"
                                 data-bs-target="#carritoBmodal">Añadir al carrito</button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 col-md-12 col-lg-4">
                     <div class="card text-light text-center bg-dark pb-2">
-                        <div class="card-body text-white">
-                            <div class="img-area mb-4">
+                        <div class="card-body text-white carta">
+                            <div id = "div-carta-2" class="img-area mb-4">
                                 <img src="../img/project-2.jpg" class="img-fluid" alt="">
                             </div>
-                            <h3>Plan Mega</h3>
-                            <h4>$14.990/mes</h4>
-                            <p class="lead">Disfruta de 98 canales disponibles en cualquier dispositivo (Máximo 3 al
+                            <div class="contenedor-carta-parrafo">
+                            <h3 class="titulo_carta">Plan Mega</h3>
+                            <script>
+                                dolar_api(14990, "#precio2");
+                            </script>
+                            <h4 id="precio2"></h4>
+                            <p id ="parrafo2" class="lead">Disfruta de 98 canales disponibles en cualquier dispositivo (Máximo 3 al
                                 mismo tiempo) entre los cuales tendrás: "FX - Tyc Sport - Animal Planet - Syfy -
                                 Warner" Entre muchos más.
                             </p>
-                            <button class="btn bg-primary text-white" data-bs-toggle="modal"
+                            <button class="btn bg-primary text-white botoncarta2" data-bs-toggle="modal"
                                 data-bs-target="#byteModal">Ver canales</button>
-                            <button class="btn bg-primary text-white" data-bs-toggle="modal"
-                                data-bs-target="#carritoPmodal">Añadir al carrito</button>    
+                            <button class="btn bg-primary text-white botoncarta2" data-bs-toggle="modal"
+                                data-bs-target="#carritoPmodal">Añadir al carrito</button>
+                            </div>    
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 col-md-12 col-lg-4">
                     <div class="card text-light text-center bg-dark pb-2">
-                        <div class="card-body text-white">
+                        <div class="card-body text-white carta">
                             <div class="img-area mb-4">
                                 <img src="../img/project-3.jpg" class="img-fluid" alt="">
                             </div>
-                            <h3>Plan Giga</h3>
-                            <h4>$19.990/mes</h4>
-                            <p class="lead">Disfruta de 147 canales disponibles en cualquier dispositivo (Sin límite
-                                de dispositivos) entre los cuales tendrás: "ESPN - Directv Sport - Fox Sport 1 -
-                                CineMax- Mtv Latino" Entre muchos más.
-                            </p>
-                            <button class="btn bg-primary text-white" data-bs-toggle="modal"
-                                data-bs-target="#gigaModal">Ver canales</button>
-                            <button class="btn bg-primary text-white" data-bs-toggle="modal"
-                                data-bs-target="#carritoGmodal">Añadir al carrito</button>
+                            <div class="contenedor-carta-parrafo">
+                                <h3>Plan Giga</h3>
+                                <script>
+                                    dolar_api(19990, "#precio3");
+                                </script>
+                                <h4 id="precio3"></h4>
+
+                                <p class="lead">Disfruta de 147 canales disponibles en cualquier dispositivo (Sin límite
+                                    de dispositivos) entre los cuales tendrás: "ESPN - Directv Sport - Fox Sport 1 -
+                                    CineMax- Mtv Latino" Entre muchos más.
+                                </p>
+                                <button class="btn bg-primary text-white" data-bs-toggle="modal"
+                                    data-bs-target="#gigaModal">Ver canales</button>
+                                <button class="btn bg-primary text-white" data-bs-toggle="modal"
+                                    data-bs-target="#carritoGmodal">Añadir al carrito</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -288,27 +301,29 @@
 							<div class="col-md-12">
 								<div class="mb-3">
 									<input type="text" name = "nombre_cli" id = "id_nombre_cli" class="form-control incorrect" placeholder="Nombre" onkeyup="validarNombre()" >
-                                    <p id="error-id_nombre_cli" class="texto-error">Ingrese solo caracteres.</p>
+                                    <p id="error-id_nombre_cli" class="texto-error">Ingrese solo carácteres.</p>
 								</div>
 							</div>
 
                             <div class="col-md-12">
 								<div class="mb-3">
 									<input type="text" name = "rut_cli" id = "id_rut_cli" class="form-control incorrect" placeholder="Rut"  onkeyup="validarRut()">
-                                    <p id="error-id_rut_cli" class="texto-error">Ingrese solo numeros, sin guion.</p>
+                                    <p id="error-id_rut_cli" class="texto-error">Ingrese solo números, sin guión.</p>
 								</div>
                                 </div>
 							</div>
 							
                             <div class="col-md-12">
 								<div class="mb-3">
-									<input type="text" class="form-control" placeholder="Telefono" >
+									<input type="text" name = "telefono_cli" id = "id_telefono_cli" class="form-control incorrect" placeholder="Telefono" onkeyup="validarTelefono()">
+                                    <p id="error-id_telefono_cli" class="texto-error">Ingrese solo números.</p>
 								</div>
 							</div>
 
 							<div class="col-md-12">
 								<div class="mb-3">
-									<input type="email" class="form-control" placeholder="Correo" >
+									<input type="email" name = "correo_cli" id = "id_correo_cli" class="form-control incorrect" placeholder="Correo" onkeyup="validarCorreo()">
+                                    <p id="error-id_correo_cli" class="texto-error">Ingrese dirección de correo válida.</p>
 
 								</div>
 							</div>
@@ -503,10 +518,12 @@
     <!-- Fin de Modals -->
 
 	<footer class="bg-dark p-2 text-center">
-		<div class="container">
-			<p class="text-white"> © 2024 Todos los derechos reservados.</p>
-		</div>
-	</footer>
+        <div id ="div_footer" class="container">
+            <p class="text-white"> © 2024 Todos los derechos reservados.</p>
+            <h1>Chistes Random</h1>
+            <p id="chiste-parrafo"></p>
+        </div>
+    </footer>
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

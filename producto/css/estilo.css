@@ -3,18 +3,22 @@
 }
 
 body {
-    background: #050a02;
+    background: black;
+}
+
+p.texto-error{
+    color: white;
 }
 
 #conocenosE {
-    background-color: rgb(73, 121, 28);
+    background-color: black;
     height: 100vh;
     display: flex;
     align-items: center;
 }
 
 #planesE {
-    background-color: rgb(73, 121, 28);
+    background-color: black;
 }
 
 .section-padding {
@@ -142,16 +146,14 @@ body {
     .section-padding {
         padding: 50px 0;
     }
+    
 
     /* Ajustar el tamaño de los contenedores de los planes */
-.card {
-    height: 400px; /* Ajusta la altura de los contenedores según tu preferencia */
-}
 
 /* Ajustar el tamaño de las imágenes */
 .card-img-top {
     height: 200px; /* Ajusta la altura de las imágenes según tu preferencia */
-    object-fit: cover; /* Para mantener la proporción de la imagen y evitar que se deforme */
+     /* Para mantener la proporción de la imagen y evitar que se deforme */
 }
 
 /* Ajustar el tamaño del texto de la descripción */
@@ -159,6 +161,60 @@ body {
     height: 150px; /* Ajusta la altura del texto según tu preferencia */
     overflow-y: auto; /* Para agregar un desplazamiento vertical si el contenido del texto es largo */
 }
+ 
+}
 
-    
+/* #parrafo1{
+    margin-bottom: 100px;
+}
+
+#div-carta-1{
+    margin-top: 60px;   
+}
+
+#parrafo2{
+    margin-bottom: 50px;
+}
+
+#div-carta-2{
+    margin-top: 60px;
+}
+
+#precio1 { 
+    margin-bottom: 40px;
+   
+}
+
+#precio2 { 
+    margin-bottom: 40px;
+ 
+}
+
+.titulo_carta {
+
+    margin-top: 50px;
+
+} */
+
+.contenedor-carta-parrafo{
+    /* text-align: center; */
+
+}
+
+.carta{
+    /* min-height: fit-content; */
+    min-height: 869px;
+    max-height: 869px;
+}
+
+/* .botoncarta1{
+    margin-top: 190px;
+}
+
+.botoncarta2{
+    margin-top: 150px;
+} */
+
+#div_footer{
+    color: white;
 }
