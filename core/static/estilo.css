@@ -196,10 +196,6 @@ p.texto-error{
 
 } */
 
-.contenedor-carta-parrafo{
-    /* text-align: center; */
-
-}
 
 .carta{
     /* min-height: fit-content; */
@@ -218,3 +214,20 @@ p.texto-error{
 #div_footer{
     color: white;
 }
+
+.errorList li{
+    color: red;
+}
+
+
+/* ------------------------------------------------ */
+
+/* Carrito de compras */
+/* General styles */
+
+/* Sección del carrito de compras */
+
+/* General styles */
+
+/* Sección del carrito de compras */
+

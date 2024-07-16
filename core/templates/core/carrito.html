@@ -1,0 +1,70 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito/FreeTv</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+        <link rel="stylesheet" href="{% static 'estilo_login.css' %}">
+    
+    <!-- Estilos personalizados -->
+</head>
+
+  <!-- CARRITO COMPRAS INICIO -->
+  <body>
+
+    <section>
+        <div id = "planes_carrito" >
+        <h1>Carrito de Compras</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in carro %}
+                    <tr>
+                        <td>{{ item.0 }}</td>
+                        <td>{{ item.2 }}</td>
+                        <td>{{ item.1 }}</td>
+                        <td>
+                            <a href="{% url 'elim_item' forloop.counter0 %}" class="eliminar-icono">
+                                <i class="bi bi-trash-fill"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        {% if not carro %}
+            <h2 style="width: 100%; text-align: center; color: white;">Carrito vacío!</h2>
+        {% endif %}
+
+        <div id = "btnsCarrito" style="text-align: center; margin-top: 20px;">
+            <a href="{% url 'home' %}" class="btn btn-primary">Volver al sitio</a>
+            <a href="{% url 'home' %}" class="btn btn-success">Finalizar compra</a>
+        </div>
+
+    </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
+    <script src="{% static 'funciones.js' %}"></script> 
+    
+</body>
+</html>

@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(300deg, #faf7f7, #070707);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    background-color: #fcfcfc;
+    padding: 40px;
+    border-radius: 30px;
+    width: 40%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+#planes_carrito {
+    max-width: 1200px; /* Incrementar la anchura máxima a 1600px */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1a1a; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(155, 155, 155, 0.1);
+}
+
+#planes_carrito h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+#planes_carrito table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#planes_carrito th, #planes_carrito td {
+    padding: 47px; /* Incrementar el padding para que las celdas sean más largas */
+    text-align: left;
+    border-bottom: 1px solid #555;
+    line-height: 1.6; /* Aumentar el line-height para más espacio entre líneas */
+    font-size: 16px; /* Ajustar el tamaño del texto si es necesario */
+}
+
+#planes_carrito th {
+    background-color: #333; /* Gris oscuro para el encabezado de la tabla */
+    color: #c4c1c1; /* Blanco para el texto del encabezado */
+}
+
+#planes_carrito td {
+    background-color: #1a1a1a; /* Gris oscuro para las celdas de la tabla */
+    color: #fffcfc; /* Gris claro para el texto de las celdas */
+    font-size: 20px;
+}
+
+#planes_carrito tr:hover td {
+    background-color: #474545; /* Gris oscuro para el hover de las filas */
+}
+
+#planes_carrito .eliminar-icono {
+    color: #d9534f; /* Rojo para el icono de eliminación */
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+#planes_carrito .eliminar-icono:hover {
+    color: #c9302c; /* Rojo más oscuro al pasar el ratón */
+}
+
+#planes_carrito h2 {
+    color: #fff; /* Blanco para el mensaje de carrito vacío */
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    #planes_carrito table, #planes_carrito th, #planes_carrito td {
+        display: block;
+        width: 100%;
+    }
+
+    #planes_carrito th, #planes_carrito td {
+        padding: 10px;
+    }
+
+    #planes_carrito th {
+        background-color: transparent;
+        color: #fff;
+        border-bottom: none;
+    }
+
+    #planes_carrito td {
+        background-color: #1a1a1a;
+        border-bottom: 1px solid #555;
+    }
+}
+
+/* estilo_login.css */
+
+#btnsCarrito {
+    display: flex;
+    justify-content: space-between; /* Para alinear los botones a los extremos opuestos */
+    margin-top: 20px;
+}
+
+#btnsCarrito a {
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+    color: white; /* Color del texto de los botones */
+}
+
+#btnsCarrito .btn {
+    width: 150px; /* Ancho deseado para los botones */
+}
+
+#btnsCarrito .btn-primary {
+    background-color: #007bff; /* Color de fondo azul para el botón "Volver al sitio" */
+}
+
+#btnsCarrito .btn-success {
+    background-color: #28a745; /* Color de fondo verde para el botón "Finalizar compra" */
+}
+
+#btnsCarrito .btn-primary:hover,
+#btnsCarrito .btn-success:hover {
+    opacity: 0.8; /* Opacidad reducida al pasar el mouse sobre los botones */
+}
+
+@media (max-width: 768px) {
+    /* Estilos específicos para pantallas pequeñas (responsive) */
+    #btnsCarrito {
+        flex-direction: column; /* Cambiar la dirección del flexbox a columna */
+    }
+
+    #btnsCarrito .btn {
+        width: 100%; /* Ancho completo para botones en pantalla pequeña */
+        margin-bottom: 10px; /* Espacio entre botones */
+    }
+}
