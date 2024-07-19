@@ -2,35 +2,44 @@ from django.shortcuts  import render, redirect
 from .forms import *
 from .models import *
 from django.contrib.auth.views import logout_then_login
+from django.conf import settings
+
+
+def comprar(request):
+    if not request.user.is_authenticated:
+        return redirect(to="login")
+    carro = request.session.get("carro", [])
+    total = 0
+    for item in carro:
+        total += item[1]
+    venta = Venta()
+    venta.cliente = request.user
+    venta.total = total
+    venta.save()
+    for item in carro:
+        detalle = DetalleVenta()
+        detalle.plan = Plan.objects.get(id = item[0])
+        detalle.precio = item[1]
+        detalle.venta = venta
+        detalle.save()
+        request.session["carro"] = []
+    return redirect(to=carrito)
 
 def carrito(request):
-    return render(request,'core/carrito.html', {"carro":request.session.get("carro", [])})
+    carro = request.session.get("carro", [])
+    total = sum(item[1] for item in carro)  # Calcula el total del carrito
+    return render(request,'core/carrito.html', {"carro":request.session.get("carro", []), "total": total })
 
-from django.shortcuts import redirect
-from django.http import HttpResponse
-from .models import Plan  # Asegúrate de importar el modelo Plan desde tu aplicación
 
 def addtocar(request, codigo):
-    # Obtener el objeto Plan según el código proporcionado
     plan = Plan.objects.get(id=codigo)
-    
-    # Obtener el carrito actual de la sesión o inicializar una lista vacía si no existe
     carro = request.session.get("carro", [])   
-    
-    # Verificar si el carrito ya tiene productos
     if carro:
-        # Verificar si el código del producto ya está en el carrito
         if codigo not in [item[0] for item in carro]:
-            # Si el código no está en el carrito, agregar el nuevo producto
             carro.append([codigo, plan.precio, plan.nombre])
     else:
-        # Si el carrito está vacío, agregar el nuevo producto directamente
         carro.append([codigo, plan.precio, plan.nombre])
-    
-    # Actualizar la sesión con el carrito actualizado
     request.session["carro"] = carro
-    
-    # Redirigir al usuario a la página de inicio (o cualquier otra página deseada)
     return redirect(to="home")
 
 

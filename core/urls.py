@@ -12,4 +12,5 @@ urlpatterns = [
     path('registro',registro,name="registro"),
     path('limpiar', limpiar),
     path('carrito', carrito, name="carrito"),
+    path('comprar',comprar,name="comprar"),
 ]

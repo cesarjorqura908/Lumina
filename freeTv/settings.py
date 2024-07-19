@@ -131,6 +131,3 @@ LOGIN_REDIRECT_URL = "home"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
